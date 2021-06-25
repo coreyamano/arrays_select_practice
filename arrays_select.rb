@@ -108,8 +108,27 @@ p no_bees
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+inventory_items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheap_stuffs = []
 
+inventory_items.each do |inventory_item|
+  if inventory_item[:price] < 10
+    cheap_stuffs << inventory_item
+  end
+end
+
+p cheap_stuffs
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 
+all_nums = [2, 4, 5, 1, 8, 9, 7]
+odd_nums = []
+
+all_nums.each do |all_num|
+  if all_num % 2 != 0
+    odd_nums << all_num
+  end
+end
+
+p odd_nums
