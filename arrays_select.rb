@@ -67,14 +67,49 @@ p short_words
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
+products = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+short_ones = []
+
+products.each do |product|
+  if product[:name].length < 6
+    short_ones << product
+  end
+end
+
+p short_ones
+
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+
+apples = [8, 23, 0, 44, 1980, 3]
+oranges = []
+
+apples.each do |apple|
+  if apple < 10
+    oranges << apple
+  end
+end
+
+p oranges
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+cards = ["big", "little", "good", "bad"]
+no_bees = []
+
+cards.each do |card|
+  if card[0] != "b"
+    no_bees << card
+  end
+end
+p no_bees
+
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+
+
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
